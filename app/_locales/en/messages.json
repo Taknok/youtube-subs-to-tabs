@@ -1,0 +1,41 @@
+{
+  "appName": {
+    "message": "YouTube Subs to Tab"
+  },
+  "appDesc": {
+    "message": "Open subscribed YouTube channel pages in discarded tabs."
+  },
+  "actionTitle": {
+    "message": "Open YouTube channels in discarded tabs"
+  },
+  "openChannels": {
+    "message": "Open channel tabs"
+  },
+  "openChannelsHint": {
+    "message": "Use this on the YouTube channel feed."
+  },
+  "working": {
+    "message": "Reading channels..."
+  },
+  "opened": {
+    "message": "Opened $count$ channel tab(s).",
+    "placeholders": {
+      "count": {
+        "content": "$count$",
+        "example": "12"
+      }
+    }
+  },
+  "notOnFeed": {
+    "message": "Open youtube.com/feed/channels first."
+  },
+  "error": {
+    "message": "Unable to read this page: $message$",
+    "placeholders": {
+      "message": {
+        "content": "$message$",
+        "example": "The page did not respond"
+      }
+    }
+  }
+}

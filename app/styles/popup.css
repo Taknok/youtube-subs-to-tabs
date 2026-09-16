@@ -1,0 +1,33 @@
+:root {
+  color-scheme: light dark;
+  font: 14px system-ui, sans-serif;
+}
+
+body {
+  min-width: 260px;
+  margin: 0;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+}
+
+#status {
+  min-height: 18px;
+}

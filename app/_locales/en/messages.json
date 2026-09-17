@@ -14,6 +14,9 @@
   "openChannelsHint": {
     "message": "Use this on the YouTube channel feed."
   },
+  "openVideos": {
+    "message": "Open channel videos pages"
+  },
   "working": {
     "message": "Reading channels..."
   },

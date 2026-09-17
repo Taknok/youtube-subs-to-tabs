@@ -37,6 +37,9 @@ For manual testing in Firefox:
 The extension only starts when its popup button is pressed. It reports the
 number of discovered and opened channels in the popup.
 
+Enable **Open channel videos pages** to open each channel's `/videos` page
+instead of its channel home.
+
 Enable **Enable debug logging** in the popup when troubleshooting. Logs are
 prefixed with `youtube-subs-to-tab:`:
 

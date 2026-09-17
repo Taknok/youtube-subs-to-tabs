@@ -1,5 +1,6 @@
 const openButton = document.querySelector("#open-channels");
 const debugCheckbox = document.querySelector("#debug");
+const openVideosCheckbox = document.querySelector("#open-videos");
 const status = document.querySelector("#status");
 
 function setStatus(message) {
@@ -15,6 +16,8 @@ function getMessageWithValue(messageName, placeholder, value) {
 async function initialize() {
   await loadDebugSetting();
   debugCheckbox.checked = debugEnabled;
+  const settings = await browser.storage.local.get("openVideos");
+  openVideosCheckbox.checked = settings.openVideos === true;
   log("Popup initialized");
 }
 
@@ -23,6 +26,23 @@ debugCheckbox.addEventListener("change", async () => {
   await browser.storage.local.set({ debug: debugEnabled });
   log("Debug logging changed", debugEnabled);
 });
+
+openVideosCheckbox.addEventListener("change", async () => {
+  await browser.storage.local.set({ openVideos: openVideosCheckbox.checked });
+  log("Open videos setting changed", openVideosCheckbox.checked);
+});
+
+function getTargetUrls(urls) {
+  if (!openVideosCheckbox.checked) {
+    return urls;
+  }
+
+  return urls.map((url) => {
+    const channelUrl = new URL(url);
+    channelUrl.pathname = `${channelUrl.pathname.replace(/\/$/, "")}/videos`;
+    return channelUrl.href;
+  });
+}
 
 openButton.addEventListener("click", async () => {
   log("Open channel tabs clicked");
@@ -39,9 +59,11 @@ openButton.addEventListener("click", async () => {
       type: "collect-channels"
     });
     log("Collected channels", response);
+    const targetUrls = getTargetUrls(response.urls);
+    log("Target channel URLs", targetUrls);
     const result = await browser.runtime.sendMessage({
       type: "open-channel-tabs",
-      urls: response.urls
+      urls: targetUrls
     });
     log("Background response", result);
 

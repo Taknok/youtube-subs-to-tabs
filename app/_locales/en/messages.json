@@ -11,6 +11,9 @@
   "openChannels": {
     "message": "Open channel tabs"
   },
+  "openFeed": {
+    "message": "Open channel feed"
+  },
   "openChannelsHint": {
     "message": "Use this on the YouTube channel feed."
   },

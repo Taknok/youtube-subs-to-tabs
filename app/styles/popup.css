@@ -23,6 +23,10 @@ button {
   padding: 8px;
 }
 
+#open-feed {
+  margin-bottom: 8px;
+}
+
 label {
   display: block;
   margin-top: 12px;

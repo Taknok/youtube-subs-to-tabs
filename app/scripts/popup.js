@@ -1,4 +1,5 @@
 const openButton = document.querySelector("#open-channels");
+const openFeedButton = document.querySelector("#open-feed");
 const debugCheckbox = document.querySelector("#debug");
 const openVideosCheckbox = document.querySelector("#open-videos");
 const status = document.querySelector("#status");
@@ -30,6 +31,18 @@ debugCheckbox.addEventListener("change", async () => {
 openVideosCheckbox.addEventListener("change", async () => {
   await browser.storage.local.set({ openVideos: openVideosCheckbox.checked });
   log("Open videos setting changed", openVideosCheckbox.checked);
+});
+
+openFeedButton.addEventListener("click", async () => {
+  try {
+    await browser.tabs.create({
+      url: "https://www.youtube.com/feed/channels"
+    });
+  } catch (error) {
+    console.error("Unable to open channel feed:", error);
+    const message = error instanceof Error ? error.message : String(error);
+    setStatus(getMessageWithValue("error", "message", message));
+  }
 });
 
 function getTargetUrls(urls) {

@@ -5,6 +5,9 @@ A Firefox extension that reads the channels shown on
 each channel page in a new discarded tab. Discarded tabs are not loaded until
 the user activates them.
 
+This project is licensed under the GNU General Public License v3.0 or later.
+See [LICENSE](LICENSE) for the complete license text.
+
 ## Development
 
 Install dependencies and run the extension lint:

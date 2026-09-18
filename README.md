@@ -5,6 +5,9 @@ A Firefox extension that reads the channels shown on
 each channel page in a new discarded tab. Discarded tabs are not loaded until
 the user activates them.
 
+This project is licensed under the GNU General Public License v3.0 or later.
+See [LICENSE](LICENSE) for the complete license text.
+
 ## Development
 
 Install dependencies and run the extension lint:
@@ -33,6 +36,12 @@ For manual testing in Firefox:
 
 The extension only starts when its popup button is pressed. It reports the
 number of discovered and opened channels in the popup.
+
+Enable **Open channel videos pages** to open each channel's `/videos` page
+instead of its channel home.
+
+Use **Open channel feed** at the top of the popup to navigate the current tab
+to the YouTube subscriptions channel feed.
 
 Enable **Enable debug logging** in the popup when troubleshooting. Logs are
 prefixed with `youtube-subs-to-tab:`:

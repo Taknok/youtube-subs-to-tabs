@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "YouTube Subs to Tab"
+    "message": "YouTube Subs to Tabs"
   },
   "appDesc": {
     "message": "Open subscribed YouTube channel pages in discarded tabs."
@@ -11,8 +11,14 @@
   "openChannels": {
     "message": "Open channel tabs"
   },
+  "openFeed": {
+    "message": "Open channel feed"
+  },
   "openChannelsHint": {
     "message": "Use this on the YouTube channel feed."
+  },
+  "openVideos": {
+    "message": "Open channel videos pages"
   },
   "working": {
     "message": "Reading channels..."

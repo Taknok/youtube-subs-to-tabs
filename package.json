@@ -2,6 +2,7 @@
   "name": "youtube-subs-to-tabs",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3.0-or-later",
   "description": "Open subscribed YouTube channel pages in discarded Firefox tabs.",
   "scripts": {
     "lint": "web-ext lint --source-dir app",
